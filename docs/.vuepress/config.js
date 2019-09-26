@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/vuepress/',
+  base: '/note/',
   dest: 'public',
   title: '笔记汇总',
   description: '笔记汇总——技术、书籍类',
