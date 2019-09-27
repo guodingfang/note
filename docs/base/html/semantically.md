@@ -1,5 +1,6 @@
 # html
 
+![An image](../images/hero.png)
 
 ## 语义化
 >12
@@ -7,6 +8,14 @@
 > 1
 
 > 1
+
+```html
+<html>
+  <body>
+  
+  </body>
+</html>
+```
 
 > 1
 *

@@ -14,7 +14,7 @@ module.exports = {
     smoothScroll: true,
   },
 
-  // extraWatchFiles: [
-  //   '.vuepress/nav/index.js'
-  // ]
+  extraWatchFiles: [
+    '.vuepress/nav/index.js'
+  ]
 };
