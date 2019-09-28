@@ -18,17 +18,16 @@ module.exports = [
       link: '/nodejs/'
     }]
   }, {
-    text: 'External',
-    link: 'https://google.com'
-  }, {
-    text: 'Languages',
-    ariaLabel: 'Language Menu',
+    text: '理财知识',
     items: [{
-      text: 'Chinese',
-      link: '/language/chinese/'
-    }, {
-      text: 'Japanese',
-      link: '/language/japanese/'
+      text: '基础',
+      link: '/nodejs/',
+    }]
+  }, {
+    text: '书籍笔记',
+    items: [{
+      text: '基础',
+      link: '/nodejs/',
     }]
   }
 ];

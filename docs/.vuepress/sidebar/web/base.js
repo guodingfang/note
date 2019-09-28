@@ -27,11 +27,36 @@ module.exports = [{
   }]
 }, {
   title: 'CSS',
-  path: 'css'
+  collapsable: false,
+  children: [{
+    title: 'CSS选择器'
+  }, {
+    title: 'CSS动画',
+  }, {
+    title: 'Grid',
+  }, {
+    title: 'CSS高级'
+  }]
 }, {
   title: 'js',
   collapsable: false,
   children: [{
     title: 'this指向',
+  }, {
+    title: '类',
+  }, {
+    title: '正则表达式'
+  }, {
+    title: 'js面向对象'
+  }, {
+    title: '继承'
+  }, {
+    title: '原型链'
+  }, {
+    title: 'MVC设计技巧'
+  }, {
+    title: 'Promise',
+  }, {
+    title: '组件化方案'
   }]
 }];
