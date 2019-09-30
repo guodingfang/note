@@ -16,18 +16,42 @@ module.exports = [
     }, {
       text: 'nodejs',
       link: '/nodejs/'
+    }, {
+      text: '微信开发',
+      link: '/weixin/'
+    }, {
+      text: '多端统一',
+      link: '/unify/'
     }]
   }, {
     text: '理财知识',
     items: [{
-      text: '基础',
-      link: '/nodejs/',
+      text: '基金',
+      link: '/fund/',
+    }, {
+      text: '股票',
+      link: '/stock/'
+    }, {
+      text: '可转债',
+      link: '/cb/'
     }]
   }, {
     text: '书籍笔记',
     items: [{
-      text: '基础',
-      link: '/nodejs/',
+      text: '思想类',
+      link: '/thought/'
+    }, {
+      text: '传记类',
+      link: '/biography/'
+    }, {
+      text: '投资类',
+      link: '/investment/'
+    }, {
+      text: '文学类',
+      link: '/letter/'
+    }, {
+      text: '工具类',
+      link: '/tool/',
     }]
   }
 ];

@@ -29,34 +29,50 @@ module.exports = [{
   title: 'CSS',
   collapsable: false,
   children: [{
-    title: 'CSS选择器'
+    title: 'CSS选择器',
+    path: 'css/selector',
   }, {
     title: 'CSS动画',
+    path: 'css/animation',
+  }, {
+    title: 'Flex',
+    path: 'css/flex',
   }, {
     title: 'Grid',
+    path: 'css/grid',
   }, {
-    title: 'CSS高级'
+    title: '其他CSS特性',
+    path: 'css/other',
   }]
 }, {
   title: 'js',
   collapsable: false,
   children: [{
     title: 'this指向',
+    path: 'js/this'
   }, {
     title: '类',
+    path: 'js/class'
   }, {
-    title: '正则表达式'
+    title: '正则表达式',
+    path: 'js/regex'
   }, {
-    title: 'js面向对象'
+    title: 'js面向对象',
+    path: 'js/oop'
   }, {
-    title: '继承'
+    title: '继承',
+    path: 'js/inherit'
   }, {
-    title: '原型链'
+    title: '原型链',
+    path: 'js/proto'
   }, {
-    title: 'MVC设计技巧'
+    title: 'MVC设计技巧',
+    path: 'js/mvc'
   }, {
     title: 'Promise',
+    path: 'js/promise'
   }, {
-    title: '组件化方案'
+    title: '组件化方案',
+    path: 'js/component'
   }]
 }];

@@ -12,6 +12,7 @@ module.exports = {
     sidebar: require('./sidebar/index'),
     sidebarDepth: 2,
     smoothScroll: true,
+    editLinks: true,
   },
 
   extraWatchFiles: [

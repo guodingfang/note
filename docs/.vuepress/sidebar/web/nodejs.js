@@ -5,33 +5,47 @@ module.exports = [{
   collapsable: false,
   path: '',
 }, {
-  title: 'Express',
-  collapsable: false,
-  children: [{
-    title: 'React构建工具',
-  }]
-}, {
   title: 'Koa2',
   collapsable: false,
   children: [{
-    title: 'Vue文档',
+    title: 'koa2介绍',
+  }, {
+    title: 'koa2文档'
+  }, {
+    title: 'koa2插件'
+  }]
+}, {
+  title: 'Express',
+  collapsable: false,
+  children: [{
+    title: 'express介绍',
+  }, {
+    title: 'express文档',
   }]
 }, {
   title: 'MongoDB',
   collapsable: false,
   children: [{
-    title: 'Vue文档',
+    title: 'mongodb介绍',
+  }, {
+    title: 'mongodb文档',
+  }, {
+    title: 'mongoose'
   }]
 }, {
   title: 'Mysql',
   collapsable: false,
   children: [{
-    title: 'Vue文档',
+    title: 'mysql介绍',
+  }, {
+    title: "mysql文档"
   }]
 }, {
   title: 'Redis',
   collapsable: false,
   children: [{
-    title: 'Vue文档',
+    title: 'redis介绍',
+  }, {
+    title: 'redis文档'
   }]
 }];

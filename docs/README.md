@@ -1,17 +1,17 @@
 ---
 home: true
 heroImage: /hero.png
-heroText: Hero
-tagline: Hero 副标题
-actionText: 快速上手 →
-actionLink: /zh/guide/
+heroText: 笔记汇总
+tagline: 知识书籍笔记
+actionText: 预览 →
+actionLink: /base/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present Evan You
+- title: 技术笔记
+  details: 以前端知识为主，node服务端，前端工程搭建，微信开发，多端统一，前端安全、通信、测试，性能优化。
+- title: 理财知识
+  details: 基金、股票、可转债方面的知识内容及理财方面的其他内容。
+- title: 书籍笔记
+  details: 书籍阅读中的所读所感，笔记及感想。
+footer: 2019-10 国庆
 ---
 
