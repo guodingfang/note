@@ -12,9 +12,5 @@ export default {
 </script>
 
 <style lang="scss">
-  .title {
-    font-size: 20px;
-    color: #0f0;
-
-  }
+  
 </style>
