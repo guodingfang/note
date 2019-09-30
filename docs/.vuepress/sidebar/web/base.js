@@ -1,8 +1,8 @@
 
 module.exports = [{
-  title: '基础',
+  title: '说明',
   collapsable: false,
-  path: '',
+  path: '/base/',
 }, {
   title: 'HTML',
   collapsable: false,
