@@ -10,7 +10,7 @@ module.exports = [{
     title: 'HTML语义化',
     path: 'html/semantically'
   }, {
-    title: 'canvas（2d、3d）',
+    title: 'canvas',
     path: 'html/canvas',
   }, {
     title: 'svg',
@@ -45,7 +45,7 @@ module.exports = [{
     path: 'css/other',
   }]
 }, {
-  title: 'js',
+  title: 'JS',
   collapsable: false,
   children: [{
     title: 'this指向',
