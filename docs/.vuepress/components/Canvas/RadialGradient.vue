@@ -8,7 +8,7 @@
 export default {
   mounted() {
     const ctx = document.getElementById('canvasRadialGradient').getContext('2d');
-    const radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+    const radgrad = ctx.createRadialGradient(45,45,10,52,50,45);
     radgrad.addColorStop(0, '#A7D30C');
     radgrad.addColorStop(0.9, '#019F62');
     radgrad.addColorStop(1, 'rgba(1,159,98,0)');

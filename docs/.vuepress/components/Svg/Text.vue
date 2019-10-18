@@ -1,6 +1,8 @@
 <template>
   <div>
-    demo
+    <svg width="300" height="100">
+      <text x="50" y="25">Hello World</text>
+    </svg>
   </div>
 </template>
 

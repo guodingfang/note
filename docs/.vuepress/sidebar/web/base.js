@@ -22,6 +22,9 @@ module.exports = [{
     title: 'audio',
     path: 'html/audio',
   }, {
+    title: 'Web存储',
+    path: 'html/store'
+  }, {
     title: '其他H5特性',
     path: 'html/other',
   }]
