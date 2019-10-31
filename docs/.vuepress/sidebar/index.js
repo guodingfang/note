@@ -16,6 +16,11 @@ module.exports = {
   '/unify/': require('./web/unify'),
 
   /**
+   * frame
+   */
+  '/ant_design_pro/': require('./frame/ant_design_pro'),
+
+  /**
    * finances       理财知识
    * --fund         基金
    * --stock        股票

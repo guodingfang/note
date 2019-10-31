@@ -24,6 +24,12 @@ module.exports = [
       link: '/unify/'
     }]
   }, {
+    text: '应用框架',
+    items: [{
+      text: 'Ant Design Pro',
+      link: '/ant_design_pro/'
+    }]
+  }, {
     text: '理财知识',
     items: [{
       text: '基金',
