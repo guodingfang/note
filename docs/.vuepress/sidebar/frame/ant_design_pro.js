@@ -34,7 +34,9 @@ module.exports = [{
 }, {
   title: 'G2',
   collapsable: false,
+  path: 'g2/'
 }, {
   title: 'Ant Design',
   collapsable: false,
+  path: 'antd/'
 }];
