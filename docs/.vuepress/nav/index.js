@@ -8,56 +8,78 @@ module.exports = [
       text: '基础',
       link: '/base/'
     }, {
+      text: '进阶',
+      items: [{
+        text: 'TypeScript',
+        link: '/typescript/'
+      }]
+    }, {
       text: '框架',
-      link: '/frame/',
-    }, {
-      text: '前端工程',
-      link: '/project/'
-    }, {
-      text: 'nodejs',
-      link: '/nodejs/'
+      items: [{
+        text: 'React',
+        link: '/react/'
+      }, {
+        text: 'Vue',
+        link: '/vue/'
+      }]
     }, {
       text: '微信开发',
-      link: '/weixin/'
+      items: [{
+        text: '微信公众号',
+        link: '/wx_official_account/'
+      }, {
+        text: '微信小程序',
+        link: '/wx_mini_program/'
+      }]
+
+    }]
+  }, {
+    text: '前端工程',
+    items: [{
+      text: 'Sass',
+      link: '/sass/'
     }, {
-      text: '多端统一',
-      link: '/unify/'
+      text: 'Less',
+      link: '/less/'
+    }, {
+      text: 'Gulp',
+      link: '/gulp/'
+    }, {
+      text: 'Npm',
+      link: '/npm/',
+    }, {
+      text: 'Webpack',
+      link: '/webpack/'
+    }, {
+      text: 'Babel',
+      link: '/babel/'
+    }, {
+      text: 'Git',
+      link: '/git/'
+    }]
+  }, {
+    text: 'nodejs开发',
+    items: [{
+      text: 'Koa2',
+      link: '/koa2/'
+    }, {
+      text: 'Express',
+      link: '/express/'
+    }, {
+      text: 'MongoDB',
+      link: '/mongodb/'
+    }, {
+      text: 'Redis',
+      link: '/redis/'
     }]
   }, {
     text: '应用框架',
     items: [{
       text: 'Ant Design Pro',
       link: '/ant_design_pro/'
-    }]
-  }, {
-    text: '理财知识',
-    items: [{
-      text: '基金',
-      link: '/fund/',
     }, {
-      text: '股票',
-      link: '/stock/'
-    }, {
-      text: '可转债',
-      link: '/cb/'
-    }]
-  }, {
-    text: '书籍笔记',
-    items: [{
-      text: '思想类',
-      link: '/thought/'
-    }, {
-      text: '传记类',
-      link: '/biography/'
-    }, {
-      text: '投资类',
-      link: '/investment/'
-    }, {
-      text: '文学类',
-      link: '/letter/'
-    }, {
-      text: '工具类',
-      link: '/tool/',
+      text: 'React Native',
+      link: '/react_native/'
     }]
   }
 ];

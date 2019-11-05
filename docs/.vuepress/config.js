@@ -1,8 +1,8 @@
 module.exports = {
   base: '/note/',
   dest: 'public',
-  title: '笔记汇总',
-  description: '笔记汇总——技术、书籍类',
+  title: '技术笔记汇总',
+  description: '技术笔记汇总',
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],

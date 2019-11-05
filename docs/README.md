@@ -2,16 +2,16 @@
 home: true
 heroImage: /hero.png
 heroText: 笔记汇总
-tagline: 知识书籍笔记
+tagline: 技术书籍笔记
 actionText: 预览 →
 actionLink: /base/
 features:
 - title: 技术笔记
-  details: 以前端知识为主，node服务端，前端工程搭建，微信开发，多端统一，前端安全、通信、测试，性能优化。
-- title: 理财知识
-  details: 基金、股票、可转债方面的知识内容及理财方面的其他内容。
-- title: 书籍笔记
-  details: 书籍阅读中的所读所感，笔记及感想。
+  details: 以前端知识，H5、CSS、JS、TS，应用框架，微信端内容。
+- title: 前端工程
+  details: 前端工程搭建，预编译，打包，代码压缩，npm依赖，自动化构建等。
+- title: nodejs
+  details: node服务端，包括服务端框架，数据库等。
 footer: 2019-10 国庆
 ---
 

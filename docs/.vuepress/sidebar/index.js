@@ -2,45 +2,55 @@ module.exports = {
   /**
    * web            技术笔记
    * --base         基础
-   * --frame        框架
-   * --project      前端工程
-   * --nodejs       nodejs
-   * --weixin       微信开发
-   * --unify        多端统一
+   * --typescript   TS
+   * --react        react
+   * --vue          vue
+   * --wx_official_account       微信公众号
+   * --wx_mini_program           微信小程序
    */
   '/base/': require('./web/base'),
-  '/frame/': require('./web/frame'),
-  '/project/': require('./web/project'),
-  '/nodejs/': require('./web/nodejs'),
-  '/weixin/': require('./web/weixin'),
-  '/unify/': require('./web/unify'),
+  '/typescript/': require('./web/typescript'),
+  '/react/': require('./web/react'),
+  '/vue/': require('./web/vue'),
+  '/wx_official_account/': require('./web/wx_official_account'),
+  '/wx_mini_program/': require('./web/wx_mini_program'),
 
   /**
-   * frame
+   * project        前端工程
+   * sass
+   * less
+   * gulp
+   * npm
+   * webpack
+   * babel
+   * git
+   */
+  '/sass/': require('./project/sass'),
+  '/less/': require('./project/less'),
+  '/gulp/': require('./project/gulp'),
+  '/npm/': require('./project/npm'),
+  '/webpack/': require('./project/webpack'),
+  '/babel/': require('./project/babel'),
+  '/git/': require('./project/git'),
+
+  /**
+   * nodejs         nodejs
+   * --koa2         Koa2
+   * --express      Express
+   * --mongodb      MongoDB
+   * --redis        Redis
+   */
+  '/koa2/': require('./nodejs/koa2'),
+  '/express/': require('./nodejs/express'),
+  '/mongodb/': require('./nodejs/mongodb'),
+  '/redis/': require('./nodejs/redis'),
+
+  /**
+   * frame              应用框架
+   * --ant_design_pro   AntDesignPro
+   * --react_native     ReactNative
    */
   '/ant_design_pro/': require('./frame/ant_design_pro'),
+  '/react_native/': require('./frame/react_native'),
 
-  /**
-   * finances       理财知识
-   * --fund         基金
-   * --stock        股票
-   * --cb           可转债
-   */
-  '/fund/': require('./finances/fund'),
-  '/stock/': require('./finances/stock'),
-  '/cb/': require('./finances/cb'),
-
-  /**
-   * book           书籍笔记
-   * --thought      思想类
-   * --biography    传记类
-   * --investment   投资类
-   * --letter       文学类
-   * --tool         工具类
-   */
-  '/thought/': require('./book/thought'),
-  '/biography/': require('./book/biography'),
-  '/investment/': require('./book/investment'),
-  '/letter/': require('./book/letter'),
-  '/tool/': require('./book/tool'),
 };
