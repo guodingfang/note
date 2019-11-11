@@ -111,7 +111,7 @@ function f(input: boolean) {
 
 在 `catch` 语句里声明的变量也具有同样的作用域规则
 
-```
+```ts
 try {
   throw "oh no!";
 } catch (e) {
