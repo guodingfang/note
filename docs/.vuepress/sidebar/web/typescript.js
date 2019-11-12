@@ -9,5 +9,11 @@ module.exports = [{
   }, {
     title: '变量声明',
     path: 'statement',
+  }, {
+    title: '接口',
+    path: 'interfaces',
+  }, {
+    title: '类',
+    path: 'class'
   }]
 }];
