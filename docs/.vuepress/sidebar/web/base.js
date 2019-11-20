@@ -75,6 +75,9 @@ module.exports = [{
     title: 'Promise',
     path: 'js/promise'
   }, {
+    title: 'Generator',
+    path: 'js/generator'
+  }, {
     title: '组件化方案',
     path: 'js/component'
   }]
