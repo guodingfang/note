@@ -12,6 +12,9 @@ module.exports = [
       items: [{
         text: 'TypeScript',
         link: '/typescript/'
+      }, {
+        text: '正则表达式',
+        link: '/regex/'
       }]
     }, {
       text: '框架',

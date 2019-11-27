@@ -3,6 +3,7 @@ module.exports = {
    * web            技术笔记
    * --base         基础
    * --typescript   TS
+   * --regex        RegExp
    * --react        react
    * --vue          vue
    * --wx_official_account       微信公众号
@@ -10,6 +11,7 @@ module.exports = {
    */
   '/base/': require('./web/base'),
   '/typescript/': require('./web/typescript'),
+  '/regex/': require('./web/regex'),
   '/react/': require('./web/react'),
   '/vue/': require('./web/vue'),
   '/wx_official_account/': require('./web/wx_official_account'),

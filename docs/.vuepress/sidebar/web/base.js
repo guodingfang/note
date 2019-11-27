@@ -57,14 +57,8 @@ module.exports = [{
     title: '类',
     path: 'js/class'
   }, {
-    title: '正则表达式',
-    path: 'js/regex'
-  }, {
-    title: 'js面向对象',
+    title: 'JS面向对象',
     path: 'js/oop'
-  }, {
-    title: '继承',
-    path: 'js/inherit'
   }, {
     title: '原型链',
     path: 'js/proto'
