@@ -63,7 +63,7 @@ module.exports = [{
     title: '原型链',
     path: 'js/proto'
   }, {
-    title: 'MVC设计技巧',
+    title: 'MV*设计技巧',
     path: 'js/mvc'
   }, {
     title: 'Promise',
