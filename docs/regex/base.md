@@ -21,18 +21,18 @@
 
 ## RegExp对象方法
 
-| 方法 | 描述 |
-| --- | --- |
-| complie | 编译正则表达式 |
-| exec | 检索字符串指定的值。返回找到值，并确定其位置 |
-| test | 检索字符串中指定的值。返回 true 或 false |
+| 方法 | 描述 | 语法 |
+| --- | --- | --- |
+| complie | 编译正则表达式 | -- |
+| exec | 检索字符串指定的值。返回找到值，并确定其位置 | regex.exec(string) |
+| test | 检索字符串中指定的值。返回 true 或 false | regex.test(string) |
 
 
 ## 支付正则表达式 String 的方法
 
-| 方法 | 描述 | 说明 |
+| 方法 | 描述 | 语法 |
 | --- | --- | --- |
-| search | 检索与正则表达式相匹配的值 | |
-| match | 找到一个或多个正则表达式的匹配 | 方法可以在字符串内检索指定的值，找到一个或多个正则表达的匹配，返回匹配结果的数组 |
-| replace | 替换与正则表达式匹配的子串 | |
-| split | 把字符串分割为字符串数组 | |
+| search | 检索与正则表达式相匹配的值 | string.search(regex) |
+| match | 找到一个或多个正则表达式的匹配 | string.match(regex) |
+| replace | 替换与正则表达式匹配的子串 | string.replace(regex, func) |
+| split | 把字符串分割为字符串数组 | string.split(regex) |

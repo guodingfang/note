@@ -29,7 +29,7 @@ let name: string = 'boo';
 name = 'smith';
 ```
 
-还可以使用**模板字符串**，它可以定义多行文本和内嵌表达式。这种字符串是被包含在 （**`**），并且以 `${ expr }` 这种形式嵌入表达式
+还可以使用**模板字符串**，它可以定义多行文本和内嵌表达式。这种字符串是被包含在 （**\`**），并且以 `${ expr }` 这种形式嵌入表达式
 
 ```ts
 let name: string = `Gene`;
@@ -106,9 +106,9 @@ TypeScript 里，`undefined` 和 `null` 两者各自有各自自己的类型分�
 let u: undefined = undefined;
 let n: null = null;
 ```
-
+::: tip
 默认情况下 `null` 和 `undefined` 是所有类型的子类型。就是说可以把 `null` 和 `undefined` 赋值给 `number` 类型的变量
-
+:::
 然而，当指定了 `--strictNullChecks` 标记，`null` 和 `undefined` 只能赋值给 `void` 和它们各自
 
 

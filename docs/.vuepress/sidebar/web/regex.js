@@ -15,5 +15,14 @@ module.exports = [{
   }, {
     title: '括号的作用',
     path: 'bracket_effect',
+  }, {
+    title: '回溯法',
+    path: 'recall',
+  }, {
+    title: '表达式拆分',
+    path: 'split'
+  }, {
+    title: '表达式编程',
+    path: 'programme',
   }]
 }];
