@@ -9,6 +9,7 @@ module.exports = [{
   collapsable: false,
   children: [{
     title: 'Vue文档',
+    path: 'document',
   }, {
     title: 'Vue-Router',
   }, {
