@@ -1,21 +1,14 @@
 module.exports = [{
-  title: '介绍',
-  collapsable: false,
-  path: '',
-},  {
-  title: 'React-Native',
+  title: 'Express',
   collapsable: false,
   children: [{
     title: '介绍',
+    path: 'introduce'
   }, {
-    title: 'RN文档'
-  }]
-}, {
-  title: 'Taro',
-  collapsable: false,
-  children: [{
-    title: 'taro介绍',
+    title: '使用指南',
+    path: 'guide'
   }, {
-    title: 'taro文档'
+    title: 'API 文档',
+    path: 'document',
   }]
 }];
