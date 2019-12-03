@@ -1,15 +1,14 @@
 
 
 module.exports = [{
-  title: '基础',
-  collapsable: false,
-  path: '',
-}, {
   title: 'Vue',
   collapsable: false,
   children: [{
-    title: 'Vue文档',
-    path: 'document',
+    title: 'Vue基础',
+    path: 'basics',
+  }, {
+    title: 'Vue组件',
+    path: 'component',
   }, {
     title: 'Vue-Router',
   }, {

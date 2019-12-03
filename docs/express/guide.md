@@ -385,3 +385,47 @@ app.get('/', function (req, res) {
 ```
 
 此时向主页发送请求，“index.jade” 会被渲染为 HTML。
+
+## 错误处理
+
+定义错误处理中间件和定义其他中间件一样，除了需要4个参数，而不是3个，其格式（err，req，res，next）。例如：
+
+```js
+app.use((err, req, res, next) => {
+  console.log(err.stack);
+  res.status(500).send('Something broke!');
+});
+```
+
+在其他 app.use() 和路由调用后，最后定义错误处理中间件，比如：
+
+```js
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
+
+app.use(bodyParser());
+app.use(methodOverride());
+app.use((err, req, res, next) => {
+  // 业务逻辑
+});
+```
+
+中间件返回的响应是随意的，可以响应一个 HTML 错误页面、一句简单的话、一个 JSON 字符串，或者其他任何您想要的东西。
+
+错误处理更多详情[查看](http://caibaojian.com/expressjs/guide/error-handling.html)
+
+## 集成数据库
+
+为 Express 应用添加连接数据库的能力，只需要加载相应数据库的 Node.js 驱动即可。这里将会简要介绍如何为 Express 应用添加和使用一些常用的数据库 Node 模块。
+* Cassandra
+* CouchDB
+* LevelDB
+* MySQL
+* MongoDB
+* Neo4j
+* PostgreSQL
+* Redis
+* SQLite
+* ElasticSearch* 
+
+集成数据库详情[查看](http://caibaojian.com/expressjs/guide/database-integration.html)
