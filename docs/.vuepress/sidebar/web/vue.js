@@ -10,7 +10,11 @@ module.exports = [{
     title: 'Vue组件',
     path: 'component',
   }, {
+    title: '过渡 & 动画',
+    path: 'transitions-animation'
+  }, {
     title: 'Vue-Router',
+    path: 'vue-router'
   }, {
     title: 'Vuex',
   }, {
