@@ -17,13 +17,15 @@ module.exports = [{
     path: 'vue-router'
   }, {
     title: 'Vuex',
+    path: 'vuex'
   }, {
     title: 'Vue构建',
+    path: 'https://cli.vuejs.org/zh/'
   }, {
     title: 'Vue第三方组件',
+    path: 'other-component'
   }, {
     title: 'Vue高级用法',
-  }, {
-    title: 'Vue实战',
+    path: 'high-usage'
   }]
 }];

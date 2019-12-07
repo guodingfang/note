@@ -8,13 +8,14 @@ module.exports = [{
   title: 'React',
   collapsable: false,
   children: [{
-    title: 'React构建工具',
-  }, {
-    title: 'React文档',
+    title: 'React基础',
+    path: 'basics'
   }, {
     title: 'React-Router',
   }, {
     title: 'Redux',
+  }, {
+    title: 'React构建工具',
   }, {
     title: 'React高阶组件',
   }, {
