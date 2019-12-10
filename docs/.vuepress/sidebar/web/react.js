@@ -1,10 +1,6 @@
 
 
 module.exports = [{
-  title: '基础',
-  collapsable: false,
-  path: '',
-}, {
   title: 'React',
   collapsable: false,
   children: [{
@@ -17,7 +13,8 @@ module.exports = [{
     title: '组件',
     path: 'component'
   }, {
-    title: 'React-Router',
+    title: 'React前端路由',
+    path: 'react-router',
   }, {
     title: 'Redux',
   }, {
