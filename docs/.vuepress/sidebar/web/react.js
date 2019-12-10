@@ -11,6 +11,12 @@ module.exports = [{
     title: 'React基础',
     path: 'basics'
   }, {
+    title: 'JSX',
+    path: 'jsx',
+  }, {
+    title: '组件',
+    path: 'component'
+  }, {
     title: 'React-Router',
   }, {
     title: 'Redux',
