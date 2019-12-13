@@ -17,6 +17,7 @@ module.exports = [{
     path: 'react-router',
   }, {
     title: 'Redux',
+    path: 'redux',
   }, {
     title: 'React构建工具',
   }, {
