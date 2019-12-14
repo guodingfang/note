@@ -384,4 +384,228 @@ render(
 
 ### 异步 Action
 
+当调用异步 API 时，有两个非常关键的时刻：发起请求的时刻，和接收到响应的时刻（也可能是超时）。
 
+这两个时刻都可能会更改应用的 state；为此，你需要 dispatch 普通的同步 action。
+
+一般情况下，每个 API 请求都需要 dispatch 至少三种 action：
+| action类型 | 描述 |
+| --- | --- |
+| 一种通知 reducer 请求开始的 action。| 对于这种 action，reducer 可能会切换一下 state 中的 isFetching 标记。以此来告诉 UI 来显示加载界面。|
+| 一种通知 reducer 请求成功的 action。| 对于这种 action，reducer 可能会把接收到的新数据合并到 state 中，并重置 isFetching。UI 则会隐藏加载界面，并显示接收到的数据。 |
+| 一种通知 reducer 请求失败的 action。| 对于这种 action，reducer 可能会重置 isFetching。另外，有些 reducer 会保存这些失败信息，并在 UI 里显示出来。 |
+
+可以将它们定义不同的 type：
+
+```
+{ type: 'FETCH_POSTS_REQUEST' }
+{ type: 'FETCH_POSTS_FAILURE', error: 'Oops' }
+{ type: 'FETCH_POSTS_SUCCESS', response: { ... } }
+```
+
+#### 同步 Action 创建函数（Action Creator）
+
+```js
+import {
+  INVALIDATE_SUBREDDIT,
+  REQUEST_POSTS,
+  RECEIVE_POSTS
+} from '../actions'
+
+const posts = (
+  state = {
+    isFetching: false,
+    didInvalidate: false,
+    items: []
+  },
+  action
+) => {
+  switch (action.type) {
+    case INVALIDATE_SUBREDDIT:
+      return { ...state, didInvalidate: true, /* ... */ };
+    case RECEIVE_POSTS:
+      return { ...state, isFetching: true, /* ... */ };
+    case REQUEST_POSTS:
+      return { ...state, isFetching: false, /* ... */ };
+    default:
+      return state
+  }
+};
+
+export const postsBySubreddit = (state = {}, action) => {
+  switch (action.type) {
+    case INVALIDATE_SUBREDDIT:
+    case RECEIVE_POSTS:
+    case REQUEST_POSTS:
+      return Object.assign({}, state, {
+        [action.subreddit]: posts(state[action.subreddit], action)
+      });
+    default:
+      return state
+  }
+};
+
+// action 操作，使用 dispatch() 调用
+export const requestPosts = () => {
+  return {
+    type: REQUEST_POSTS,
+    /* ... */
+  }
+};
+export const receivePosts = (data) => {
+  return {
+    type: RECEIVE_POSTS,
+    /* ... */
+  }
+};
+```
+
+#### 异步 action 创建函数
+
+想要将同步的 action 创建函数和网络请求结合起来，需要引入 `redux-thunk` 中间件。
+
+当 action 创建函数返回返回函数时，这个函数会被 Redux Thunk middleware 执行。这个函数并不需要保持纯净；它还可以带有副作用，包括执行异步 API 请求。这个函数还可以 dispatch action，就像 dispatch 前面定义的同步 action 一样。
+
+```js
+
+/**
+* 由 thunk action 创建函数！
+* 虽然内部操作不同，你可以像其它 action 创建函数 一样使用它：
+* store.dispatch(fetchPosts(res))
+*/
+export const fetchPosts = () => {
+  /**
+  * Thunk middleware 知道如何处理函数。
+  * 这里把 dispatch 方法通过参数的形式传给函数，
+  * 以此来让它自己也能 dispatch action。
+  */
+  return async dispatch => {
+    /**
+    * 首次 dispatch：更新应用的 state 来通知
+    * API 请求发起了。
+    */
+    dispatch(requestPosts());
+    /**
+    * thunk middleware 调用的函数可以有返回值，
+    * 它会被当作 dispatch 方法的返回值传递。
+    * 
+    * 这个案例中，我们返回一个等待处理的 promise。
+    * 这并不是 redux middleware 所必须的，但这对于我们而言很方便。
+    */
+    const res = await fetch(/* 链接*/);
+    
+    dispatch(receivePosts(res));
+  }
+}
+```
+
+使用 `applyMiddleware()`，可以在 dispatch 机制中引入 Redux Thunk middleware 
+
+```js
+import thunkMiddleware from 'redux-thunk'
+import { createLogger } from 'redux-logger'
+
+import { createStore, applyMiddleware } from 'redux'
+
+import rootReducer from './reducers'
+const loggerMiddleware = createLogger()
+
+const store = createStore(
+  rootReducer,
+  applyMiddleware(
+    thunkMiddleware, // 允许我们 dispatch() 函数
+    loggerMiddleware // 一个很便捷的 middleware，用来打印 action 日志
+  )
+)
+```
+
+还可以使用 [redux-saga](https://redux-saga-in-chinese.js.org/)
+
+### 异步数据流
+
+默认情况下，`createStore()` 所创建的 Redux store 没有使用 middleware，所以只支持 同步数据流。
+
+你可以使用 `applyMiddleware()` 来增强 `createStore()`
+
+像 redux-thunk 或 redux-promise 这样支持异步的 middleware 都包装了 store 的 dispatch() 方法，以此来让你 dispatch 一些除了 action 以外的其他内容，例如：
+
+函数或者 Promise。你所使用的任何 middleware 都可以以自己的方式解析你 dispatch 的任何内容，并继续传递 actions 给下一个 middleware。比如，支持 Promise 的 middleware 能够拦截 Promise，然后为每个 Promise 异步地 dispatch 一对 begin/end actions。
+
+当 middleware 链中的最后一个 middleware 开始 dispatch action 时，这个 action 必须是一个普通对象。
+
+### Middleware
+
+Redux middleware 的定位是：**它提供的是位于 action 被发起之后，到达 reducer 之前的扩展点。**
+
+你可以利用 Redux middleware 来进行日志记录、创建崩溃报告、调用异步接口或者路由等等。
+
+#### 理解 Middleware
+
+正因为 middleware 可以完成包括异步 API 调用在内的各种事情，了解它的演化过程是一件相当重要的事。我们将以记录日志和创建崩溃报告为例，引导你体会从分析问题到通过构建 middleware 解决问题的思维过程。
+
+具体有关 Middleware 的[详情查看](https://www.redux.org.cn/docs/advanced/Middleware.html)
+
+### 搭配 React Router
+
+想在 Redux 应用中使用路由功能，可以搭配使用 React Router 来实现。Redux 和 React Router 将分别成为你数据和 URL 的事实来源。
+
+#### 连接 React Router 和 Redux 应用
+
+首先，从 React Router 中导出 `<Route>` 和 `<Routes>`，然后渲染路由绑定的组件。`<Route />` 用来显式地把路由映射到应用的组件结构上：
+
+```jsx harmony
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
+
+const Home = () => <div>Home</div>;
+
+const App = () => (
+  <Router>
+    <Route path="/" component={Home} />
+  </Router>
+)
+```
+
+另外，在 React 应用中，使用 `<Provider />`。`<Provider />` 是由 React Redux 提供的高阶组件，用来让你将 Redux 绑定到 React。
+
+然后，从 React Redux 导入 `<Provider />`，用 `<Provider />` 包裹 `<Router />`，以便于路由处理器可以访问 store：
+
+```jsx harmony
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
+
+/**
+* reducer 引入
+*/
+import reducers from './reducers';
+
+/**
+* 获取 store 将 store 传入 <Provider> 中
+* 使得应用中组件可以直接通过 props 获取 redux 中的 state 状态树
+*/
+const store = createStore(reducers, compose(
+  applyMiddleware(thunk),
+  window.devToolsExtension ?  window.devToolsExtension() : f => f
+));
+
+
+const Home = () => <div>Home</div>;
+
+const App = () => (
+  <Provider store={store}>
+    <Router>
+      <Route path="/" component={Home} />
+    </Router>
+  </Provider>
+)
+```
+
+## API 文档
+
+API 文档 [详情查看](https://www.redux.org.cn/docs/api/)

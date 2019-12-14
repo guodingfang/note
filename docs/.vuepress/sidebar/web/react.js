@@ -20,8 +20,10 @@ module.exports = [{
     path: 'redux',
   }, {
     title: 'React构建工具',
+    path: 'tools',
   }, {
     title: 'React高阶组件',
+    path: 'higher-order-components'
   }, {
     title: 'React第三方插件',
   }, {
