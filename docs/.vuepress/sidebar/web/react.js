@@ -23,10 +23,12 @@ module.exports = [{
     path: 'tools',
   }, {
     title: 'React高阶组件',
-    path: 'higher-order-components'
+    path: 'higher-order-components',
   }, {
-    title: 'React第三方插件',
+    title: 'React插件',
+    path: 'other-plugin',
   }, {
     title: 'React高级用法',
+    path: 'higher-usage',
   }]
 }];

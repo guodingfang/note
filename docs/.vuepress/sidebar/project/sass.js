@@ -5,9 +5,12 @@ module.exports = [{
   collapsable: false,
   children: [{
     title: 'sass介绍',
+    path: 'introduce',
   }, {
-    title: 'sass文档',
+    title: 'sass基础',
+    path: 'basics'
   }, {
-    title: 'sass用法'
+    title: 'sass用法',
+    path: 'https://www.sass.hk/docs/',
   }]
 }];

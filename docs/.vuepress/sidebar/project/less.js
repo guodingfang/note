@@ -4,10 +4,16 @@ module.exports = [ {
   title: 'Less',
   collapsable: false,
   children: [{
-    title: 'less介绍',
+    title: 'less基础',
+    path: 'basics'
   }, {
-    title: 'less文档',
+    title: 'Less用法',
+    path: 'usage',
   }, {
-    title: 'less用法'
+    title: 'Less函数',
+    path: 'func'
+  }, {
+    title: 'Less进阶',
+    path: 'features'
   }]
 }];
