@@ -5,9 +5,12 @@ module.exports = [{
   collapsable: false,
   children: [{
     title: 'webpack介绍',
+    path: 'introduce',
   }, {
-    title: 'webpack文档',
+    title: 'webpack概念',
+    path: 'concept',
   }, {
-    title: 'webpack用法'
+    title: 'webpack配置',
+    path: 'https://www.webpackjs.com/configuration/',
   }]
 }];

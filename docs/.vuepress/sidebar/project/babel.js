@@ -5,9 +5,12 @@ module.exports = [{
   collapsable: false,
   children: [{
     title: 'babel介绍',
+    path: 'introduce',
   }, {
-    title: 'babel文档',
+    title: 'babel插件',
+    path: 'plugin',
   }, {
-    title: 'babel插件'
+    title: 'babel预设',
+    path: 'presets',
   }]
 }];

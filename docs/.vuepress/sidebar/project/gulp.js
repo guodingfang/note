@@ -5,9 +5,9 @@ module.exports = [{
   collapsable: false,
   children: [{
     title: 'gulp介绍',
+    path: 'introduce'
   }, {
     title: 'gulp文档',
-  }, {
-    title: 'gulp用法'
+    path: 'https://www.gulpjs.com.cn/docs/api/concepts/'
   }]
 }];
