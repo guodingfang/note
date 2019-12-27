@@ -1,21 +1,14 @@
 module.exports = [{
-  title: '介绍',
-  collapsable: false,
-  path: '',
-},  {
-  title: 'React-Native',
+  title: 'Koa2',
   collapsable: false,
   children: [{
-    title: '介绍',
+    title: 'ko2 介绍',
+    path: 'introduce'
   }, {
-    title: 'RN文档'
-  }]
-}, {
-  title: 'Taro',
-  collapsable: false,
-  children: [{
-    title: 'taro介绍',
+    title: 'koa2 文档',
+    path: 'https://koa.bootcss.com/'
   }, {
-    title: 'taro文档'
+    title: 'koa2 中间件',
+    path: 'https://www.jianshu.com/p/c1e0ca3f9764'
   }]
 }];

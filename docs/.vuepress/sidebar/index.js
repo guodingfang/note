@@ -42,6 +42,7 @@ module.exports = {
    * --mongodb      MongoDB
    * --redis        Redis
    */
+  '/nodejs/': require('./nodejs/nodejs'),
   '/koa2/': require('./nodejs/koa2'),
   '/express/': require('./nodejs/express'),
   '/mongodb/': require('./nodejs/mongodb'),

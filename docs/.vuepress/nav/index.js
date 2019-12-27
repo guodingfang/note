@@ -63,6 +63,9 @@ module.exports = [
   }, {
     text: 'nodejs开发',
     items: [{
+      text: 'NodeJs',
+      link: '/nodejs/'
+    }, {
       text: 'Koa2',
       link: '/koa2/'
     }, {
