@@ -5,5 +5,5 @@ module.exports = {
   sidebarDepth: 2,
   smoothScroll: true,
   editLinks: true,
-  lastUpdated: 'Last Updated',    // 最后提交时间
+  lastUpdated: '上次更新',    // 最后提交时间
 }

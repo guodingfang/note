@@ -8,7 +8,7 @@ module.exports = {
   ],
 
   themeConfig: require('./configs/index'),
-
+  plugins: require('./plugins.config'),
   extraWatchFiles: [
     '.vuepress/configs/'
   ]

@@ -29,7 +29,7 @@ module.exports = [
       text: 'ECMAScript',
       items: [{
         text: 'JS（基础）',
-        link: '/basics/js/'
+        link: '/basics/javascript/'
       }, {
         text: '正则表达式',
         link: '/basics/regex/'
@@ -110,6 +110,9 @@ module.exports = [
       text: 'MongoDB',
       link: '/mongodb/'
     }, {
+      text: 'MySQL',
+      link: '/mysql/'
+    }, {
       text: 'Redis',
       link: '/redis/'
     }]
@@ -120,13 +123,19 @@ module.exports = [
       link: '/account/'
     }, {
       text: '微信小程序',
-      link: '/miniprogram/'
+      items: [{
+        text: '云开发',
+        link: '/miniprogram-cloud/'
+      }],
     }]
   }, {
     text: '应用框架',
     items: [{
-      text: 'egg',
+      text: 'Egg',
       link: '/egg/'
+    }, {
+      text: 'Flutter',
+      link: '/flutter/'
     }]
   }
 ];

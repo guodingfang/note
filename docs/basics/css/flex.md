@@ -140,6 +140,8 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 order: <integer>
 ```
 
+### flex-grow 属性
+
 ![flex-grow](../images/flex-grow.png)
 
 如果所有项目的 `flex-grow` 属性都是1，则它们将等分剩余空间（如果有的话）。如果一个项目的 `flex-grow` 属性为2，其他项目都为1，则前者占据的剩余空间比其他项多一倍。
