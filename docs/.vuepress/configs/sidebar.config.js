@@ -15,4 +15,5 @@ module.exports = {
   '/basics/sass/': require('./sidebar/basics/sass'),
   '/basics/less/': require('./sidebar/basics/less'),
   '/basics/javascript/': require('./sidebar/basics/javascript'),
+  '/basics/regex/': require('./sidebar/basics/regex'),
 }
