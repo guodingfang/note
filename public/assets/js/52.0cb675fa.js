@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[52],{291:function(t,e,n){"use strict";n.r(e);var s={},l=n(0),i=Object(l.a)(s,(function(){var t=this.$createElement,e=this._self._c||t;return e("div",[e("svg",{attrs:{width:"300",height:"100"}},[e("text",{attrs:{x:"50",y:"25"}},[this._v("Hello World")])])])}),[],!1,null,null,null);e.default=i.exports}}]);

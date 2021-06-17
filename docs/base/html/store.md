@@ -139,7 +139,7 @@ let db = null;
 require.onupgradeneeded = (event) => {
   db = event.target.result;
   // 判断数据库中是否已经存在该名称的数据表
-  if (!db.objecttables.container('table')) {
+  if (!db.objectStoreNames.container('table')) {
     objectStore = db.createObjectStore('table', { keyPath: 'id' }); 
     objectStore.createIndex('name', 'name', { unique: false }); 
     objectStore.createIndex('age', 'age', { unique: true }); 

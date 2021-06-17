@@ -104,7 +104,7 @@ export default class Title extends Component {
 
 函数的参数校验，只要按照传统的方法进行校验即可。在函数内部顶部判断参数的值和类型，如果不满足要求，则抛出异常，并给出相应的提示。
 
-```jsx
+```js
 // ES6 语法
 changeTitle(title) {
   if (typeof title !== 'string') {

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[50],{285:function(t,n,e){"use strict";e.r(n);var l={},s=e(0),i=Object(s.a)(l,(function(){var t=this.$createElement,n=this._self._c||t;return n("div",[n("svg",{attrs:{width:"300",height:"100"}},[n("polyline",{attrs:{points:"3,3 30,28 3,53",fill:"none",stroke:"black"}})])])}),[],!1,null,null,null);n.default=i.exports}}]);

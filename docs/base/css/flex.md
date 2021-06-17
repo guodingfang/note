@@ -192,7 +192,7 @@
 {
   align-self: auto | flex-start | flex-end | center | baseline | stretch;
 }
-```
+``` 
 
 ![align-self](../images/align-self.png)
 
